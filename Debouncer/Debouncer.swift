@@ -11,7 +11,7 @@ public final class Debouncer {
     private var block: (() -> Void)?
     private var timer: NSTimer?
     
-    init(delay: Double = 0.25) {
+    public init(delay: Double = 0.25) {
         self.delay = delay
     }
     
