@@ -324,6 +324,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -341,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.levantAJ.Debouncer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -383,6 +385,7 @@
 				3DB51B991C16E523000DFF5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3DB51B9A1C16E523000DFF5A /* Build configuration list for PBXNativeTarget "DebouncerTests" */ = {
 			isa = XCConfigurationList;
@@ -391,6 +394,7 @@
 				3DB51B9C1C16E523000DFF5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

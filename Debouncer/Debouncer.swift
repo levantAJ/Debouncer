@@ -6,31 +6,38 @@
 //  Copyright © 2015 levantAJ. All rights reserved.
 //
 
+public protocol Debouncable {
+    func dispatch(_ completion: @escaping (() -> Void))
+    func invalidate()
+}
+
 public final class Debouncer {
     private let delay: Double
-    private var block: (() -> Void)?
-    private var timer: NSTimer?
+    private var completion: (() -> Void)?
+    private var timer: Timer?
     
     public init(delay: Double = 0.25) {
         self.delay = delay
     }
-    
-    public func dispatch(block: (() -> Void)) {
-        timer?.invalidate()
-        self.block = block
-        timer = NSTimer.scheduledTimerWithTimeInterval(delay,
-            target: self,
-            selector: callbackSelector,
-            userInfo: nil,
-            repeats: false)
-    }
-    
-    private let callbackSelector = Selector("callback")
-    
+
     @objc func callback() {
-        self.block?()
+        self.completion?()
     }
-    
+}
+
+// MARK: - Debouncable
+
+extension Debouncer: Debouncable {
+    public func dispatch(_ completion: @escaping (() -> Void)) {
+        timer?.invalidate()
+        self.completion = completion
+        timer = Timer.scheduledTimer(timeInterval: delay,
+                                     target: self,
+                                     selector: #selector(callback),
+                                     userInfo: nil,
+                                     repeats: false)
+    }
+
     public func invalidate() {
         timer?.invalidate()
     }
