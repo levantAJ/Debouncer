@@ -7,7 +7,7 @@ This is a point, so when the user type really fast, you just only make a request
 ### How it works?
 
 ```
-let debouncer = Debouncer() // You can pass the delay value here
+let debouncer = Debouncer(delay: 0.25) // You can pass the delay value here
 
 debouncer.dispatch {
    // Your request here
