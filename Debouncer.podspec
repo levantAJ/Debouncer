@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.module_name = 'Debouncer'
   s.name = 'Debouncer'
-  s.version = '0.0.1'
+  s.version = '0.0.2'
   s.license = 'MIT'
   s.summary = 'Debouncer for @levantAJ team'
   s.homepage = 'https://github.com/levantAJ'
