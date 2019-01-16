@@ -8,7 +8,6 @@ Pod::Spec.new do |s|
   s.authors = { 'Le Tai' => 'sirlevantai@gmail.com' }
   s.source = { :git => 'https://github.com/levantAJ/Debouncer.git', :tag => s.version }
   s.source_files = 'Debouncer/**/*.{h,swift}'
-  s.resources = "Debouncer/**/*.{xib,strings}"
   s.platform = :ios
   s.ios.deployment_target = '8.0'
   s.requires_arc = true
