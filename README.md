@@ -6,7 +6,9 @@ This is a point, so when the user type really fast, you just only make a request
 
 ### How to install
 
-`pod 'Debouncer'`
+```swift
+pod 'Debouncer', '0.0.2'
+```
 
 ### How it works?
 
